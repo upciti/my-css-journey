@@ -1,0 +1,238 @@
+:root {
+  /* default theme color */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-primary: #fff;
+  --slidev-code-radius: 0.75rem;
+  --slidev-code-margin: 0;
+  --glow-color: #0ea5e9;
+}
+
+.slidev-page {
+  @apply bg-[#334155];
+}
+
+.slidev-layout {
+  h2 {
+    @apply mb-4;
+  }
+}
+
+.slidev-layout.full {
+  @apply h-full grid bg-[#020617];
+}
+
+.slidev-layout.cover {
+  @apply h-full grid bg-[#001871];
+
+  h1 {
+    @apply text-6xl font-bold leading-20;
+  }
+
+  h1 + p {
+    @apply -mt-2 mb-4;
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
+
+.slidev-layout p:not(blockquote p):not(blockquote + p) {
+  @apply my-2;
+}
+
+.slidev-layout ul {
+  @apply list-disc;
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-2 overflow-clip bg-transparent;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded bg-slate-500/0.16;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded bg-slate-500/50;
+}
+
+.slidev-layout blockquote {
+  @apply group relative border-none flex rounded-2xl bg-slate-500/10 py-2 px-3 inset-0 ring-1 ring-inset ring-slate-600;
+}
+
+.slidev-layout blockquote + p,
+.slidev-layout img + p {
+  @apply mt-1 ml-2 text-sm text-base-50 font-medium;
+}
+
+.slidev-layout.full {
+  .glowing-button {
+    @apply relative text-6xl py-4 px-6 rounded-3xl font-bold;
+    position: relative;
+    color: var(--glow-color);
+    border: 0.15em solid var(--glow-color);
+    background: none;
+    perspective: 2em;
+    letter-spacing: 1em;
+
+    -webkit-box-shadow:
+      inset 0 0 0.5em 0 var(--glow-color),
+      0 0 0.5em 0 var(--glow-color);
+    -moz-box-shadow:
+      inset 0 0 0.5em 0 var(--glow-color),
+      0 0 0.5em 0 var(--glow-color);
+    box-shadow:
+      inset 0 0 0.5em 0 var(--glow-color),
+      0 0 0.5em 0 var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+  }
+
+  .glowing-text {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow:
+      0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    -moz-text-shadow:
+      0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    text-shadow:
+      0 0 0.125em hsl(0 0% 100% / 0.3),
+      0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+  }
+
+  .faulty-letter {
+    opacity: 0.5;
+    animation: faulty-flicker 2s linear infinite;
+  }
+
+  .glowing-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
+
+  .glowing-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+  }
+
+  @keyframes faulty-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 0.1;
+    }
+    4% {
+      opacity: 0.5;
+    }
+    19% {
+      opacity: 0.5;
+    }
+    21% {
+      opacity: 0.1;
+    }
+    23% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    83% {
+      opacity: 0.4;
+    }
+
+    87% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+
+    2% {
+      opacity: 1;
+    }
+
+    8% {
+      opacity: 0.1;
+    }
+
+    9% {
+      opacity: 1;
+    }
+
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

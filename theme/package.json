@@ -1,0 +1,32 @@
+{
+  "name": "slidev-theme-upciti",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "slidev": ">=0.19.3"
+  },
+  "//": "Learn more: https://sli.dev/themes/write-a-theme.html",
+  "slidev": {
+    "colorSchema": "dark",
+    "highlighter": "shiki",
+    "defaults": {
+      "lineNumbers": true,
+      "aspectRatio": "16/9",
+      "titleTemplate": "%s - Upciti",
+      "colorSchema": "dark",
+      "fonts": {
+        "sans": "Inter",
+        "mono": "JetBrainsMono",
+        "provider": "google"
+      },
+      "favicon": "/images/upciti-symbol-white.svg",
+      "highlighter": "shiki"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "printWidth": 120,
+  "singleQuote": true,
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "semi": true,
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "trailingComma": "all"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "singleQuote": false
+      }
+    },
+    {
+      "files": "*.vue",
+      "options": {
+        "htmlWhitespaceSensitivity": "ignore",
+        "trailingComma": "all"
+      }
+    }
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "importOrder": ["<THIRD_PARTY_MODULES>", "^[./]"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}

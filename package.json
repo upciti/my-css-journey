@@ -1,0 +1,31 @@
+{
+  "name": "my-css-journey",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "precommit": "lint-staged && npm run prettier:check && npm run build",
+    "prepare": "husky install",
+    "prettier:check": "prettier --check \"./**/*.{json,vue,ts,md,?(s)css,yml}\"",
+    "prettier:write": "prettier --write \"./**/*.{json,vue,ts,md,?(s)css,yml}\""
+  },
+  "dependencies": {
+    "@slidev/cli": "0.45.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "playwright-chromium": "1.40.1",
+    "prettier": "3.1.0",
+    "sort-package-json": "2.6.0"
+  },
+  "engines": {
+    "node": "^18.12.0 || ^20.0.0",
+    "npm": ">=9.0.0"
+  }
+}
