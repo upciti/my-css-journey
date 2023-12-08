@@ -53,7 +53,7 @@ hideInToc: true
 <div class="flex flex-col items-center justify-center gap-4">
 <div class="relative">
 <img v-click src="/images/arrows.svg" alt="arrows" class="max-h-[26rem]">
-<img  src="/images/smarlhens_400x400.webp" alt="Samuel MARLHENS" class="max-h-[10rem] absolute left-1/2 transform -translate-1/2 top-1/2">
+<img  src="/images/smarlhens_400x400.webp" alt="Samuel MARLHENS" class="max-h-[10rem] absolute left-1/2 transform -translate-1/2 top-1/2 rounded-full">
 </div>
 </div>
 <span v-click class="text-3xl font-semibold italic text-white">
