@@ -12,16 +12,16 @@
     "prettier:write": "prettier --write \"./**/*.{json,vue,ts,md,?(s)css,yml}\""
   },
   "dependencies": {
-    "@slidev/cli": "0.45.0"
+    "@slidev/cli": "0.46.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.3",
-    "@commitlint/config-conventional": "18.4.3",
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
     "husky": "8.0.3",
     "lint-staged": "15.2.0",
     "playwright-chromium": "1.40.1",
-    "prettier": "3.1.0",
+    "prettier": "3.1.1",
     "sort-package-json": "2.6.0"
   },
   "engines": {
